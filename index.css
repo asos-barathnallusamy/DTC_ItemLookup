@@ -1,0 +1,96 @@
+:root {
+  --yellow: #f6e767;
+  --white: #f6f7f8;
+  --black: #2c2e31;
+  --bold-black: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans",
+    "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+    "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+/* Add spacing between elements */
+label, input, select {
+  margin-bottom: 10px;
+}
+
+#getItembtn {
+  background: var(--yellow);
+  color: var(--bold-black);
+  padding: 1rem 2rem;
+  font-weight: 600; /* Bold */
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  transition: 0.1s ease transform;
+  cursor: pointer;
+}
+
+#getItembtn:active {
+  transform: translateY(3px);
+}
+
+#apiResponseTable th,
+#apiResponseTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: right;
+  color: var(--bold-black);
+  text-transform: uppercase;
+}
+
+#apiResponseTable th {
+  background-color: var(--bold-black);
+  color: var(--white);
+  text-align: center;
+}
+
+#apiResponseTable td.true {
+  color: #4caf50; /* Green color for 'true' values */
+}
+
+#apiResponseTable td.false,#error {
+  color: #ff4d51; /* Red color for 'false' values */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1;
+  text-align: right;
+  max-width: 80%;
+  max-height: 95%;
+  overflow: auto;
+}
+
+.close {
+  position: absolute;
+  color: var(--bold-black);
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+

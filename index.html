@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <label for="variantID">Enter Variant ID:</label> <input type="number" id="variantID">
+
+  <label for="store">Select a store:</label>
+  <select id="store">
+      <option value="com">COM</option>
+      <option value="fr">FR</option>
+      <option value="de">DE</option>
+      <option value="es">ES</option>
+      <option value="it">IT</option>
+      <option value="nl">NL</option>
+      <!-- Add more preset options as needed -->
+  </select>
+
+  <div id="popupContainer" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <table id="apiResponseTable">
+      <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+      </tr>
+    </table>
+  </div>
+
+  <!-- <button id="button" type='button'>Get Product Details</button> -->
+  <button id="getItembtn" type='button' onclick="getItemDetails()">Get Item Details</button>
+  <p id="setup"></p>
+  <p id="punchline"></p>
+  <p id="error"></p>
+
+  <script src="index.js"></script>
+</body>
